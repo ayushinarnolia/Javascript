@@ -26,3 +26,30 @@ const myFunction= function (){
 }
 
 console.log(typeof obj);
+
+
+//***********************************  Memory  **************************************
+
+//2 types:
+//Stack(Primitive)
+//Heap(Non Primitive)
+
+let myYoutubeName="ayushidotcom"
+let anotherName=myYoutubeName//here you get copy
+anotherName="chai aur code"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne={
+    email: "user@gmail.com",
+    upi: "upi@ybl"
+}
+
+let userTwo=userOne//reference of same thing is sent so changes are reflected in original values as well
+
+userTwo.email="ayushi@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
