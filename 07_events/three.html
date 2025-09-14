@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS TWO</title>
+</head>
+<body>
+    <h1>Ayushi Learning Javascript</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    let intervalID
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    document.querySelector('#start').addEventListener('click',function(){
+        if(!intervalID)
+            intervalID = setInterval(sayDate,1000,"yo")
+    },false)
+
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalID)
+        intervalID = null
+    },false)
+    
+
+    
+</script>
+</html>

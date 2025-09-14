@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS TWO</title>
+</head>
+<body>
+    <h1>Ayushi Narnolia</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    //setimeout does the job once but settimeinterval does it multiple times in a loop
+    
+    const fun1 = function(){
+        console.log('ayushi');
+    }
+    
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'JS Learning'
+    }
+
+    const changeMe = setTimeout(changeText,2000)
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(changeMe)
+        console.log('STOPPED THE EVENT');
+    },false)
+
+    //setTimeout(fun1,2000)//need to send reference of the function here
+
+
+</script>
+</html>
